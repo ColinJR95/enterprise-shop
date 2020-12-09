@@ -3,6 +3,7 @@ import Homepage from './containers/homepage/Homepage'
 import {Switch, Route } from 'react-router-dom'
 import ShopPage from './containers/shop/Shop'
 
+
 function App() {
   return (
     <div className="App">

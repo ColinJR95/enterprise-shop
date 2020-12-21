@@ -1,6 +1,7 @@
 import React from 'react';
 import './SignIn.scss';
 import FormInput from '../form-input/FormInput';
+import GlobalButton from '../global-button/GlobalButton';
 
 class SignIn extends React.Component {
 	constructor(props) {
@@ -50,7 +51,7 @@ handleChange = event => {
 				label="password"
 				required 
 				/>
-				<input type='submit' value='Submit Form' />
+				<GlobalButton type='submit'> Sign in </GlobalButton>
 			</form>
 			</div>
 			)

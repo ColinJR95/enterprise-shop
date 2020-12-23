@@ -4,12 +4,23 @@ import {Switch, Route } from 'react-router-dom'
 import ShopPage from './containers/shop/Shop'
 import Header from './components/header/Header'
 import authPage from './containers/authPage/authPage'
+import { auth } from './firebase/firebase.utils'
+import React from 'react'
 
 
 
 
-function App() {
-  return (
+class App extends React.Component  {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null
+    }
+  }
+
+  render() {    
+    return (
     <div className="App">
     <Header />
       <Switch>
@@ -19,7 +30,9 @@ function App() {
       </Switch>
 
     </div>
-  ); 
+    )
+   } 
+
 }
 
 export default App;

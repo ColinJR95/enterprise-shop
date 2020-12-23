@@ -2,7 +2,8 @@ import React from 'react';
 import './SignIn.scss';
 import FormInput from '../form-input/FormInput';
 import GlobalButton from '../global-button/GlobalButton';
-
+import { signInWithGoogle } from '../../firebase/firebase.utils';
+ 
 class SignIn extends React.Component {
 	constructor(props) {
 		super(props);
@@ -52,6 +53,7 @@ handleChange = event => {
 				required 
 				/>
 				<GlobalButton type='submit'> Sign in </GlobalButton>
+				<GlobalButton type='submit' onClick={signInWithGoogle}> Sign in with GOOGLE </GlobalButton>
 			</form>
 			</div>
 			)

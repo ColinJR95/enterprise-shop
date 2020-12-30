@@ -1,9 +1,12 @@
 import React from 'react';
 import './GlobalButton.scss';
 
-const GlobalButton = ({children, ...otherprops}) => (
+const GlobalButton = ({children, isGoogleSignIn, ...otherprops}) => (
 
-			<button className='global_button' {...otherprops} >
+			<button 
+			className={`${isGoogleSignIn ? 'google-sign-in' : ''} global_button`} 
+			{...otherprops} 
+			>
 				{children}
 			</button>
 	);

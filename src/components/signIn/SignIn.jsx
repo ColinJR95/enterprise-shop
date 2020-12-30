@@ -52,8 +52,15 @@ handleChange = event => {
 				label="password"
 				required 
 				/>
+
+				<div className='buttons'>
+
 				<GlobalButton type='submit'> Sign in </GlobalButton>
-				<GlobalButton type='submit' onClick={signInWithGoogle}> Sign in with GOOGLE </GlobalButton>
+
+				<GlobalButton type='submit' onClick={signInWithGoogle} isGoogleSignIn >with google</GlobalButton>
+		
+				</div>
+
 			</form>
 			</div>
 			)
